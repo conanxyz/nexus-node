@@ -35,6 +35,11 @@ Then simply run:
 ```bash
 docker compose up -d
 ```
+## Update Version
+
+```
+docker compose build --no-cache && docker compose up -d
+```
 
 ## Additional Notes
 
