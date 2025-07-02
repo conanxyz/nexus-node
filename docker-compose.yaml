@@ -1,6 +1,13 @@
 services:
   nexus-node:
-    build: .
-    stdin_open: true
-    tty: true
-    command: ["${NODE_ID}"]
+   container_name: nexus-node
+   restart: always
+   build: .
+   stdin_open: true
+   tty: true
+   command: ["${NODE_ID}"]
+   deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 8g
