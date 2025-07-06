@@ -7,6 +7,18 @@ This project allows you to quickly deploy a Nexus CLI node using Docker.
 1. Open your browser and visit [https://app.nexus.xyz/nodes](https://app.nexus.xyz/nodes)
 2. After registering, click the `Add CLI Node` button on the page
 3. The system will generate a Node ID. Copy this ID for use in the following steps
+4. Alternatively, you can register your wallet address and create a node ID with the CLI
+```bash
+curl https://cli.nexus.xyz/ | sh
+nexus-network register-user --wallet-address <your-wallet-address>
+nexus-network register-node
+```
+
+output
+```
+No node ID provided. Registering a new node in environment: Environment::Beta, URL: https://beta.orchestrator.nexus.xyz
+Node registered successfully with ID: 13146643
+```
 
 ## Step 2: Configure Node ID
 
