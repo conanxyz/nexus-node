@@ -9,8 +9,11 @@ RUN apt-get update \
          libssl-dev \
          git-all \
          curl \
-         ca-certificates \
-    && curl -fsSL https://cli.nexus.xyz/ | sh
+         ca-certificates 
+        
+RUN curl -sSf https://cli.nexus.xyz/ -o install.sh \
+    && chmod +x install.sh \
+    && NONINTERACTIVE=1 ./install.sh && rm install.sh
 
 FROM ubuntu:24.04
 
