@@ -11,9 +11,11 @@ RUN apt-get update \
          curl \
          ca-certificates 
         
+ENV NONINTERACTIVE=1
+
 RUN curl -sSf https://cli.nexus.xyz/ -o install.sh \
     && chmod +x install.sh \
-    && NONINTERACTIVE=1 ./install.sh && rm install.sh
+    && ./install.sh && rm install.sh
 
 FROM ubuntu:24.04
 
